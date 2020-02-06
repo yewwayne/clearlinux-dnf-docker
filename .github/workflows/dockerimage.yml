@@ -6,4 +6,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag clearlinux-dnf:$(date +%s)
+      run: docker build . --file Dockerfile --tag clearlinux-dnf
+    - name: Test
+      run: docker run --rm clearlinux-dnf dnf repolist -v
