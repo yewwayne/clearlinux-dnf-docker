@@ -13,7 +13,7 @@ COPY dnf.conf /
 # Also install dnf
 RUN source /usr/lib/os-release \
     && curl -f https://raw.githubusercontent.com/clearlinux/clr-bundles/$VERSION_ID/bundles/os-core | grep -v '^#' > ./os-core \
-    && [[ -s ./os-core ]]
+    && [[ -s ./os-core ]] \
     && mkdir /install_root \
     && dnf install --releasever=${VERSION_ID} \
        --config ./dnf.conf \
