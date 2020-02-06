@@ -1,3 +1,5 @@
+![Docker Image CI](https://github.com/yewwayne/clearlinux-dnf-docker/workflows/Docker%20Image%20CI/badge.svg)
+
 Clear Linux with traditional package management.
 
 Usage: Instead of installing bundles with swupd, simply install individual packages using regular DNF commands.
